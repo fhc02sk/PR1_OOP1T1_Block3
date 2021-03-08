@@ -9,26 +9,24 @@ public class LottoNumberGeneratorDemo {
         // Verschachtelung von Schleifen
         for (int tipps = 0; tipps < 5; tipps++) {
             System.out.print("Nr. " + tipps + ": ");
-            createOneTipp();
-            // TODO 2:
-            // wir speichern uns den int[]
-            // wir gegen den Tipp aus
+            int[] arr = createOneTipp();
+
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + ", ");
+            }
+            System.out.println();
         }
     }
 
-    // rewrite this method
-    /*  TODO 1:
-        - no print inside method
-        - erzeugt einen Array mit den Länge von 6 / creates an array with length of 6
-        - befüllt den Array mit 6 Zufallszahlen / fills the array with 6 random numbers (immer noch nicht eindeutig)
-        - retourniert den Array an den Aufrufer
-     */
-    public static void createOneTipp(){
+    public static int[] createOneTipp(){
+        int[] oneTipp = new int[6]; // 1.
+
         //  for(startwert; bedingung;inkrement)
-        for (int i = 0; i < 6; i++) {
-            System.out.print(generateOneNumber(45) + ", ");
+        for (int i = 0; i < oneTipp.length; i++) {
+            oneTipp[i] = generateOneNumber(45) ; // 2.
         }
-        System.out.println();
+
+        return oneTipp; // 3.
     }
 
     public static int generateOneNumber(int range){
