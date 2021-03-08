@@ -29,11 +29,18 @@ public class AccountCalculation {
 
     public static double calcInterests(double startCapital, double rates, int years) {
         for(int i = 1; i <= years;i++){
+            double calc = calcInterestOneYear(startCapital, rates);
 
-            double calc = startCapital * (1 + rates / 100.0);
-            System.out.println("End of " + i + " year: " + startCapital + " -> " + calc );
+            String niceValueStartCapital = String.format("%.2f", startCapital);
+            String niceValueCalc = String.format("%.2f", calc);
+
+            System.out.println("End of " + i + " year: " + niceValueStartCapital + " -> " + niceValueCalc );
             startCapital = calc;
         }
         return startCapital;
+    }
+
+    public static double calcInterestOneYear(double startCapital, double rates){
+        return startCapital * (1 + rates / 100.0);
     }
 }
