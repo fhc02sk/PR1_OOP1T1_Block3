@@ -14,13 +14,23 @@ public class ArrayDemoApp {
         intArray[3] = 4;
         intArray[4] = 99; // 5. Wert
 
-        for (int i = 0; i < intArray.length; i++) {
-            System.out.print(intArray[i] + ", ");
+        int[] n = generateNumbers();
+
+        for (int i = 0; i < n.length; i++) {
+            System.out.print(n[i] + ", ");
         }
 
         /* Array beginnt mit Index 0 => erste Wert
         *  Funktioniert mit beliebigen Datentyp
         *  = new Datentyp[ANZAHL];
         * */
+    }
+
+    public static int[] generateNumbers() {
+        int[] numbers = new int[3];
+        numbers[0] = 9;
+        numbers[1] = 7;
+        numbers[2] = 4;
+        return numbers;
     }
 }
