@@ -10,13 +10,14 @@ public class LottoNumberGeneratorDemo {
         for (int tipps = 0; tipps < 5; tipps++) {
             System.out.print("Nr. " + tipps + ": ");
             createOneTipp();
+            // TODO 2:
             // wir speichern uns den int[]
             // wir gegen den Tipp aus
         }
     }
 
     // rewrite this method
-    /*
+    /*  TODO 1:
         - no print inside method
         - erzeugt einen Array mit den Länge von 6 / creates an array with length of 6
         - befüllt den Array mit 6 Zufallszahlen / fills the array with 6 random numbers (immer noch nicht eindeutig)
