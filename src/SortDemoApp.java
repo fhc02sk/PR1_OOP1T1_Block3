@@ -4,13 +4,13 @@ public class SortDemoApp {
     public static void main(String[] args) {
 
         int[] arr = new int[7];
-        arr[0] = 9;
-        arr[1] = 8;
+        arr[0] = 9; // int arr1 = 9;
+        arr[1] = 8; // int arr2 = 8;
         arr[2] = 7;
         arr[3] = 6;
         arr[4] = 5;
         arr[5] = 4;
-        arr[6] = 3;
+        arr[6] = 3; // int arr7 = 3;
 
         arrangeOrder(arr);
 
@@ -32,8 +32,8 @@ public class SortDemoApp {
             3. Schiebe die gesicherte Karte auf die neue frei Position
          */
 
-        int tmp = numbers[1]; // 8er auf die Seite geschoben
+        int space = numbers[1]; // 8er auf die Seite geschoben
         numbers[1] = numbers[0];// auf die frei Position die linke Karte hingeschoben
-        numbers[0] = tmp; // 0 ist freigeworden, hier die gesicherte Karte ablegen
+        numbers[0] = space; // 0 ist freigeworden, hier die gesicherte Karte ablegen
     }
 }
