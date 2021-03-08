@@ -6,20 +6,28 @@ public class LottoNumberGeneratorDemo {
 
         System.out.println("Unser Quicktipps");
 
-        System.out.println(generateOneNumber());
-        System.out.println(generateOneNumber());
-        System.out.println(generateOneNumber());
-        System.out.println(generateOneNumber());
-        System.out.println(generateOneNumber());
-        System.out.println(generateOneNumber());
+        // Verschachtelung von Schleifen
+        for (int tipps = 0; tipps < 5; tipps++) {
+            createOneTipp();
+        }
     }
 
-    public static int generateOneNumber(){
-        Random random = new Random();
-        int value = (random.nextInt() % 45) + 1;
-        if (value < 0) {
-            value = value * -1;
+    public static void createOneTipp(){
+        for (int i = 0; i < 6; i++) {
+            System.out.print(generateOneNumber(45) + ", ");
         }
+        System.out.println();
+    }
+
+    public static int generateOneNumber(int range){
+        Random random = new Random();
+        int randValue = random.nextInt();
+        if (randValue < 0) {
+            randValue = randValue * -1;
+        }
+
+        int value = (randValue % range) + 1;
+
         return value;
     }
 }
