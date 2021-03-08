@@ -47,13 +47,23 @@ public class PrimValidationDemo {
     }
 
     public static boolean isPrim(int number) {
+        for(int checkValue = 2; checkValue < number / 2; checkValue++) {
+            if (number % checkValue == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+/*    public static boolean isPrim(int number) {
         int checkValue = 2;
 //        boolean checkIsPrim = true;
         while (checkValue < Math.sqrt(number)) {
 
             if (number % checkValue == 0){
                 // Ups, es keine Primzahl, da es irgendeinen Teiler gibt
-  //              checkIsPrim = false;
+  //              checkIsPrim = false; // wird nicht benötigt, wenn return verwendet wird.
                 // Abbrechen, da alles was jetzt noch kommt, hat keine Relevanz
                 //break;
                 return false;
@@ -64,5 +74,5 @@ public class PrimValidationDemo {
         //return checkIsPrim;
         return true;
     }
-
+*/
 }
