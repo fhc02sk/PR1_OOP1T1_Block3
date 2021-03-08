@@ -22,6 +22,7 @@ public class ArrayDemo2App {
         arr[5] = 17; // n6
         arr[6] = 21; // n7
 
+        // replaces line 16 - 23
         int[] arr2 = {54, 33, 12, 44, 77, 17, 21, 99};
         System.out.println("arr2.length = " + arr2.length);
         int sum2 = 0;

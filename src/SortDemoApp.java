@@ -35,5 +35,9 @@ public class SortDemoApp {
         int space = numbers[1]; // 8er auf die Seite geschoben
         numbers[1] = numbers[0];// auf die frei Position die linke Karte hingeschoben
         numbers[0] = space; // 0 ist freigeworden, hier die gesicherte Karte ablegen
+
+
+        // 1. Array von links nach rechts durchlaufe => for
+        // 2. arr[i] mit arr[i+1] => austauschen
     }
 }
