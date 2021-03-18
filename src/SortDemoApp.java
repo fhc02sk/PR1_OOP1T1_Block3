@@ -20,24 +20,36 @@ public class SortDemoApp {
         }
         System.out.println();
         System.out.println(Arrays.toString(arr));
+
+        arrangeOrder(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void arrangeOrder(int[] numbers) {
 
         System.out.println("length=" + numbers.length);
 
-        /*
-            1. Schiebe eine Karte auf die Seite => Schiebe die rechte auf die Seite
-            2. Schiebe die linke Karte auf die Position der rechten Karte bzw. freie Position
-            3. Schiebe die gesicherte Karte auf die neue frei Position
-         */
+        boolean didSwapOperation = true;
+        while (didSwapOperation) {
+            // 1. Array von links nach rechts durchlaufe => for
+            didSwapOperation = false;
+            for (int i = 0; i < numbers.length - 1; i++) {
+                // 2. arr[i] mit arr[i+1] => austauschen
+                if (numbers[i] > numbers[i + 1]) {
+                   /*
+                    1. Schiebe eine Karte auf die Seite => Schiebe die rechte auf die Seite
+                    2. Schiebe die linke Karte auf die Position der rechten Karte bzw. freie Position
+                    3. Schiebe die gesicherte Karte auf die neue frei Position
+                 */
+                    didSwapOperation = true;
+                    int space = numbers[i]; // 8er auf die Seite geschoben
+                    numbers[i] = numbers[i + 1];// auf die frei Position die linke Karte hingeschoben
+                    numbers[i + 1] = space; // 0 ist freigeworden, hier die gesicherte Karte ablegen
 
-        int space = numbers[1]; // 8er auf die Seite geschoben
-        numbers[1] = numbers[0];// auf die frei Position die linke Karte hingeschoben
-        numbers[0] = space; // 0 ist freigeworden, hier die gesicherte Karte ablegen
+                }
+            }
 
+        }
 
-        // 1. Array von links nach rechts durchlaufe => for
-        // 2. arr[i] mit arr[i+1] => austauschen
     }
 }
