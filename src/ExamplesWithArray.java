@@ -30,6 +30,8 @@ public class ExamplesWithArray {
 
     // TODO 5 (complicated): Write a method, which returns an array with duplicated numbers (81, 51)
 
-
+    // TODO 6: Write a method, to calculate the average over all values (think about datatype)
+    // TODO 7: Write a method, which replaces one number by a new new number => public static void replace(int searchNumber, int newNumber)
+    // TODO 8 (complicated): Write a method which extends an array by one number. You need to create a new array with a length + 1 and copy existing values to array and add the new number at end
 
 }
